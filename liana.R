@@ -28,7 +28,7 @@ figure_name <- paste(figure_name,"LR.pdf", sep="")
 pdf(file =figure_name, width=12)
 liana_test %>%
   liana_dotplot(source_groups = c("Rod"),
-                target_groups = c("Cone", "Mullerglia", "Rod"),
+                target_groups = c("Cone", "Mullerglia","Rod"),
                 ntop = 20)
 
 dev.off() 
@@ -44,4 +44,12 @@ heat_freq(liana_trunc)
 dev.off() 
 
 
+figure_name <- mysamples
+figure_name <- paste(figure_name,"Chord.pdf", sep="")
+pdf(file =figure_name, width=12)
+p <- chord_freq(liana_trunc,
+                source_groups = c("Rod", "Cone", "Mullerglia"),
+                target_groups = c("Rod", "Cone", "Mullerglia"))
+
+dev.off() 
 
