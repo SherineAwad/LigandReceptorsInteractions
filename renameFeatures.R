@@ -1,6 +1,6 @@
 library(readr)
 
-
+#This code require Seurat5 
 args <- commandArgs(trailingOnly = TRUE)
 mysample <- args[1]
 
