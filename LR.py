@@ -23,13 +23,13 @@ def main():
      #new_cellype we have are {'AC', 'MGPCs', 'Rod_p', 'BC', 'RestMG', 'RGC_p', 'RGC', 'Rod', 'AC_p', 'HC', 'ActivateMG', 'BC_p', 'Cone_p', 'Microglia', 'Cone'}
      #we use inplace=False to print to file 
      phonePD = cellphonedb(adata,groupby='new_celltype',resource_name='consensus',resource=zfish,expr_prop=0,  use_raw = False,inplace = False)
-     phonePD.to_csv("cellphoneotm1.csv", sep='\t', encoding='utf-8', index=False, header=True) 
+     phonePD.to_csv("cellphone.csv", sep='\t', encoding='utf-8', index=False, header=True) 
 
      cellchatPD = cellchat(adata,groupby='new_celltype',resource_name='consensus',resource=zfish,expr_prop=0, use_raw = False, inplace = False)
-     cellchatPD.to_csv("cellchatotm1.csv", sep='\t', encoding='utf-8', index=False, header=True) 
+     cellchatPD.to_csv("cellchat.csv", sep='\t', encoding='utf-8', index=False, header=True) 
      
      scPD = singlecellsignalr(adata,groupby='new_celltype',resource_name='consensus',resource=zfish,expr_prop=0, use_raw = False,inplace = False)
-     scPD.to_csv("signalRotm1.csv", sep='\t', encoding='utf-8', index=False, header=True)
+     scPD.to_csv("signalR.csv", sep='\t', encoding='utf-8', index=False, header=True)
      
      rkm = rank_aggregate(adata,groupby='new_celltype',resource_name='consensus',resource=zfish,expr_prop=0,  aggregate_method="mean", use_raw = False, inplace=False)
      rkm.to_csv("RK_mean.csv",  sep='\t', encoding='utf-8', index=False, header=True)

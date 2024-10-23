@@ -21,6 +21,7 @@ def toZebra():
                                    min_evidence=3
                                    )
 
+
      # rename the columns to source and target, respectively for the original organism and the target organism
      map_df = map_df.rename(columns={'human_symbol':'source', 'zebrafish_symbol':'target'})
      map_df.tail()
@@ -33,7 +34,7 @@ def toZebra():
                                  ## in this case, we would keep mappings as long as they don't map to more than 2 zebrafish genes
                                  #one_to_many=3
                                  #will keep that map only to one gene 
-                                 one_to_many=1
+                                 one_to_many=5
                                  )
      return zfish
 
